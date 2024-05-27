@@ -1,33 +1,32 @@
 /* Google fonts import */
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300,400;500;600;700&display=swap');
 
 /* Asterisk wildcard selector to override default styles added by the browser*/
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
 /* General styles */
-body{
+body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    /*Generic project styles */
+    /* Generic project styles */
     color: #3a3a3a;
-    font-family: sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 h1, h2, h3 {
-    font-family: Oswald, sans-serif;
+    font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #252525;
 }
 
 /* Header */
- header{
+ header {
     background-color: #ffffff;
     padding: 0 1rem;
     position: fixed;
@@ -39,18 +38,18 @@ h1, h2, h3 {
     align-items: baseline;
 }
 
-header a{
+header a {
     text-decoration: none;
     color: inherit;
 }
 
 
-#menu { 
+#menu {
     font-size: 110%;
     letter-spacing: 4px;
     list-style-type: none;
 }
-#menu > li{
+#menu> li {
     margin-bottom: 1em;
 }
 
@@ -59,9 +58,9 @@ header a{
 }
 
 /* Navbar styles with dropdown toggle */
-nav{
+nav {
     position: absolute;
-    background-color:#ffffff;
+    background-color: #ffffff;
     width: 100%;
     left: 0;
     padding: 0 1rem;
@@ -70,13 +69,13 @@ nav{
     top: 100%;
 }
 
-/* Nav toggle*/
+/* Nav toggle */
 #nav-toggle:checked~nav {
     display: block;
 }
 
 #nav-toggle {
-    display:none;
+    display: none;
 }
 
 .nav-toggle-label {
@@ -84,21 +83,21 @@ nav{
 }
 
 /* Main content */
-main{
-        /* Make main element take up any surplus space to push footer down */
+main {
+    /* Make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
     margin-top: 47px;
 }
 
-/* Hero section*/
+/* Hero section */
 #hero {
     height: 600px;
     width: 100%;
-    background: url('../images/hero-image.webp') no-repeat centre/cover;
+    background: url("../images/hero-image.webp") no-repeat center center/cover;
     position: relative;
     
 }
-#cover-text{
+#cover-text {
     /* Final rgba value sets the opacity so it is semi-transparent */
     background-color: rgba(241, 109, 107, .7);
     font-size: 130%;
@@ -110,33 +109,33 @@ main{
     padding-left: 10px;
 }
 
-#cover-text > h2, #cover-text > h3 {
+#cover-text>h2, #cover-text>h3 {
     color: #ffffff;
 }
 
-/* Reasons section*/
-#reasons{
+/* Reasons section */
+#reasons {
     width: 90%;
     margin: 20px auto;
 }
-#reasons h2{
+#reasons h2 {
     margin-bottom: 20px;
     text-align: center;
     font-size: 280%;
 }
-#benefits-physical > div, #benefits-mentally > div {
+#benefits-physical>div, #benefits-mentally>div {
     line-height: 20px;
     margin-bottom: 20px;
 }
 #benefits p {
     padding: 0 20px;
 }
-hr {
+#benefits hr {
     border-top: 1px solid #3a3a3a;
-    margin: 5px;
+    margin: 5px 0;
 }
 #circle-cover-bg {
-    background: url('../images/reasons-image.webp') no-repeat top center/ cover;
+    background: url('../images/reasons-image.webp') no-repeat top center / cover;
     height: 90vw;
     width: 90vw;
     margin-bottom: 20px;
@@ -161,38 +160,40 @@ hr {
     justify-content: space-evenly;
     list-style-type: none;
 }
-#social-network i {
+#social-networks i {
     font-size: 160%;
     padding: 5%;
     color: #3a3a3a;
 }
 
-/* Media query: tablets and larger (768px and up)*/
+/* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
-    /* Header*/
-    nav{
+    
+    /* Header */
+    nav {
         display: block;
         position: relative;
         box-shadow: none;
         width: fit-content;
         padding-right: 1rem;
     }
-    #menu{
+    #menu {
         display: flex;
     }
-    #menu > li{
+    #menu>li {
         padding-left: 1rem;
     }
-    .nav-toggle-label{
+    .nav-toggle-label {
         display: none;
     }
-    #logo{
+    #logo {
         font-size: 280%;
         line-height: 75px;
         margin: 0 0.5rem;
     }
-    main{
-        /* Push main content down to accommodate larger header*/
+    /* Main content */
+    main {
+        /* Push main content down to accommodate larger header */
         margin-top: 79px;
     }
 
@@ -209,24 +210,24 @@ hr {
         width: 100%;
     }
 
-    #benefits-physical > div,
-    #benefits-mental > div {
+    #benefits-physical>div,
+    #benefits-mental>div {
         width: 75%;
     }
-    #benefits-mental > div {
+    #benefits-mental>div {
         text-align: end;
         align-self: flex-end;
     }
 }
-/* Large devices (laptops and desktops, 992px and up)*/
-@media screen and (min-width: 992px){
-    #menu a:hover{
+/* Large devices (laptops and desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+    #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
     }
 }
 
 @media screen and (min-width: 1200px) {
-    /* Reasons section */
+   /* Reasons section */
     #benefits {
         display: flex;
         flex-direction: row;
@@ -237,7 +238,7 @@ hr {
     }
 
     #benefits-image {
-        order: 0;
+        order: 0
     }
 
     #benefits-mental {
